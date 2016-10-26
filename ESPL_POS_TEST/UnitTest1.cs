@@ -8,7 +8,7 @@ namespace ESPL_POS_TEST
     public class UnitTest1
     {
         [TestMethod]
-        public void TestMethod1()
+        public void TestRetrieveItemBySKU()
         {
             Product p = new Product();
 
@@ -16,6 +16,17 @@ namespace ESPL_POS_TEST
 
             Assert.AreEqual(9.90, product.Price);
             
+        }
+
+        [TestMethod]
+        public void TestRetrieveNoValidSKU()
+        {
+            Product p = new Product();
+
+            Product product = p.returnProductList("154");
+
+            Assert.AreEqual(null, product.Price);
+
         }
     }
 }
