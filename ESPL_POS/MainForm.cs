@@ -16,6 +16,7 @@ namespace ESPL_POS
     {
 
         Product prd = new Product();
+        DataTable posTable = new DataTable();
 
         public MainForm()
         {
@@ -24,6 +25,8 @@ namespace ESPL_POS
             
 
             InitializeComponent();
+
+            posTable = createTable();
 
             //Product prd = new Product("P123", "Socks", 9.90, 5);
             //productList.Add(prd);
@@ -54,7 +57,20 @@ namespace ESPL_POS
             return dTable;
         }
 
-        //public Data
+        public DataTable addToTable(Product prd, DataTable dTable)
+        {
+            DataRow dRow;
+            dRow = dTable.NewRow();
+
+            dRow[0] = prd.ProductSKU;
+            dRow[1] = prd.ProductName;
+            dRow[2] = prd.Price;
+            dRow[3] = 1;
+
+            dTable.Rows.Add(dRow);
+
+            return dTable;
+        }
 
 
         private void btnFind_Click(object sender, EventArgs e)
@@ -68,12 +84,17 @@ namespace ESPL_POS
                 else
                 {
                     //var findProduct = productList.Where(wh => wh.ProductSKU == txtProductID.Text);
-                    var findProduct = prd.returnProductListBySKUID(txtProductID.Text);
-                    if (findProduct.Any())
+                    var findProduct = prd.returnProductList(txtProductID.Text);
+
+                    if (findProduct != null)
                     {
-                        MessageBox.Show(findProduct.SingleOrDefault().ProductName);
-                        //gridviewData.DataSource = findProduct;
-                        //gridviewData.Refresh();
+
+                        addToTable(findProduct, posTable);
+                        //MessageBox.Show(findProduct.ProductName);
+                        gridviewData.DataSource = posTable;
+                        gridviewData.Refresh();
+
+
                     }
                     else
                     {
