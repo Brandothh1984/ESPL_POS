@@ -34,9 +34,12 @@
             this.label1 = new System.Windows.Forms.Label();
             this.rightPane = new System.Windows.Forms.Panel();
             this.gridviewData = new System.Windows.Forms.DataGridView();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.panel1 = new System.Windows.Forms.Panel();
             this.leftpane.SuspendLayout();
             this.rightPane.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.gridviewData)).BeginInit();
+            this.panel1.SuspendLayout();
             this.SuspendLayout();
             // 
             // leftpane
@@ -56,7 +59,7 @@
             this.btnFind.Name = "btnFind";
             this.btnFind.Size = new System.Drawing.Size(75, 23);
             this.btnFind.TabIndex = 2;
-            this.btnFind.Text = "Find";
+            this.btnFind.Text = "Add";
             this.btnFind.UseVisualStyleBackColor = true;
             this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
             // 
@@ -78,6 +81,7 @@
             // 
             // rightPane
             // 
+            this.rightPane.Controls.Add(this.panel1);
             this.rightPane.Controls.Add(this.gridviewData);
             this.rightPane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rightPane.Location = new System.Drawing.Point(387, 0);
@@ -94,6 +98,24 @@
             this.gridviewData.Size = new System.Drawing.Size(324, 341);
             this.gridviewData.TabIndex = 0;
             // 
+            // btnClear
+            // 
+            this.btnClear.Location = new System.Drawing.Point(237, 8);
+            this.btnClear.Name = "btnClear";
+            this.btnClear.Size = new System.Drawing.Size(75, 23);
+            this.btnClear.TabIndex = 3;
+            this.btnClear.Text = "Clear";
+            this.btnClear.UseVisualStyleBackColor = true;
+            // 
+            // panel1
+            // 
+            this.panel1.Controls.Add(this.btnClear);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(324, 36);
+            this.panel1.TabIndex = 1;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -107,6 +129,7 @@
             this.leftpane.PerformLayout();
             this.rightPane.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.gridviewData)).EndInit();
+            this.panel1.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -119,6 +142,8 @@
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel rightPane;
         private System.Windows.Forms.DataGridView gridviewData;
+        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Button btnClear;
     }
 }
 

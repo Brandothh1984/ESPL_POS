@@ -42,7 +42,7 @@ namespace ESPL_POS
             set { qty = value; }
         }
 
-
+        List<Product> productList = new List<Product>();
 
         public Product(string sku, string pName, double pr, int _qty)
         {
@@ -52,6 +52,28 @@ namespace ESPL_POS
             qty = _qty;
         }
 
-        public Product() { }
+        public Product() {
+            Product prd = new Product("P123", "Socks", 9.90, 5);
+            productList.Add(prd);
+
+            prd = new Product("P345", "Shirts", 10.90, 4);
+            productList.Add(prd);
+
+            prd = new Product("P234", "Skirts", 14.90, 3);
+            productList.Add(prd);
+        }
+
+        public List<Product> returnProductList()
+        {
+            return productList;
+        }
+
+        public Product returnProductList(string sku)
+        {
+            return productList.Where(wh => wh.productSKU == sku).SingleOrDefault();
+        }
+
+
+
     }
 }
