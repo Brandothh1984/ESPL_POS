@@ -68,12 +68,15 @@ namespace ESPL_POS
             return productList;
         }
 
+        public List<Product> returnProductListBySKUID(string sku)
+        {
+            return productList.Where(wh => wh.productSKU == sku).ToList();
+        }
+
         public Product returnProductList(string sku)
         {
             return productList.Where(wh => wh.productSKU == sku).SingleOrDefault();
         }
-
-
 
     }
 }

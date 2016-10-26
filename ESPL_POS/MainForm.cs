@@ -68,17 +68,17 @@ namespace ESPL_POS
                 else
                 {
                     //var findProduct = productList.Where(wh => wh.ProductSKU == txtProductID.Text);
-                    var findProduct = prd.returnProductList(txtProductID.Text);
-                    //if (findProduct.Any())
-                    //{
-                    //    MessageBox.Show(findProduct.SingleOrDefault().ProductName);
-                    //    //gridviewData.DataSource = findProduct;
-                    //    //gridviewData.Refresh();
-                    //}
-                    //else
-                    //{
-                    //    MessageBox.Show("Item not found!");
-                    //}
+                    var findProduct = prd.returnProductListBySKUID(txtProductID.Text);
+                    if (findProduct.Any())
+                    {
+                        MessageBox.Show(findProduct.SingleOrDefault().ProductName);
+                        //gridviewData.DataSource = findProduct;
+                        //gridviewData.Refresh();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Item not found!");
+                    }
                 }
             }
             catch (Exception ex)
