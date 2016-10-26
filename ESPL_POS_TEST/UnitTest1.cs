@@ -12,7 +12,7 @@ namespace ESPL_POS_TEST
         {
             Product p = new Product();
 
-            Product product = p.returnProductList("P345");
+            Product product = p.returnProductList("P124");
 
             Assert.AreEqual(9.90, product.Price);
             
