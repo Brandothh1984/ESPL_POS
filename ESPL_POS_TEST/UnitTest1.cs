@@ -11,8 +11,11 @@ namespace ESPL_POS_TEST
         public void TestMethod1()
         {
             Product p = new Product();
+
+            Product product = p.returnProductList("P123");
+
+            Assert.AreEqual(9.90, product.Price);
             
-           
         }
     }
 }
