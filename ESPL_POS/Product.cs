@@ -75,7 +75,13 @@ namespace ESPL_POS
 
         public Product returnProductList(string sku)
         {
-            return productList.Where(wh => wh.productSKU == sku).SingleOrDefault();
+            var findPrd = productList.Where(wh => wh.productSKU == sku);
+
+            if (findPrd.Any())
+            {
+                return findPrd.SingleOrDefault();
+            }
+            else return null;
         }
 
     }

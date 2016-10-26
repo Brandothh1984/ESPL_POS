@@ -33,13 +33,15 @@
             this.txtProductID = new System.Windows.Forms.TextBox();
             this.label1 = new System.Windows.Forms.Label();
             this.rightPane = new System.Windows.Forms.Panel();
-            this.gridviewData = new System.Windows.Forms.DataGridView();
-            this.btnClear = new System.Windows.Forms.Button();
             this.panel1 = new System.Windows.Forms.Panel();
+            this.btnClear = new System.Windows.Forms.Button();
+            this.gridviewData = new System.Windows.Forms.DataGridView();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.leftpane.SuspendLayout();
             this.rightPane.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.gridviewData)).BeginInit();
             this.panel1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridviewData)).BeginInit();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // leftpane
@@ -81,22 +83,22 @@
             // 
             // rightPane
             // 
+            this.rightPane.Controls.Add(this.panel2);
             this.rightPane.Controls.Add(this.panel1);
-            this.rightPane.Controls.Add(this.gridviewData);
             this.rightPane.Dock = System.Windows.Forms.DockStyle.Fill;
             this.rightPane.Location = new System.Drawing.Point(387, 0);
             this.rightPane.Name = "rightPane";
             this.rightPane.Size = new System.Drawing.Size(324, 341);
             this.rightPane.TabIndex = 1;
             // 
-            // gridviewData
+            // panel1
             // 
-            this.gridviewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
-            this.gridviewData.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.gridviewData.Location = new System.Drawing.Point(0, 0);
-            this.gridviewData.Name = "gridviewData";
-            this.gridviewData.Size = new System.Drawing.Size(324, 341);
-            this.gridviewData.TabIndex = 0;
+            this.panel1.Controls.Add(this.btnClear);
+            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
+            this.panel1.Location = new System.Drawing.Point(0, 0);
+            this.panel1.Name = "panel1";
+            this.panel1.Size = new System.Drawing.Size(324, 36);
+            this.panel1.TabIndex = 1;
             // 
             // btnClear
             // 
@@ -107,14 +109,23 @@
             this.btnClear.Text = "Clear";
             this.btnClear.UseVisualStyleBackColor = true;
             // 
-            // panel1
+            // gridviewData
             // 
-            this.panel1.Controls.Add(this.btnClear);
-            this.panel1.Dock = System.Windows.Forms.DockStyle.Top;
-            this.panel1.Location = new System.Drawing.Point(0, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(324, 36);
-            this.panel1.TabIndex = 1;
+            this.gridviewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridviewData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridviewData.Location = new System.Drawing.Point(0, 0);
+            this.gridviewData.Name = "gridviewData";
+            this.gridviewData.Size = new System.Drawing.Size(324, 305);
+            this.gridviewData.TabIndex = 0;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.gridviewData);
+            this.panel2.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.panel2.Location = new System.Drawing.Point(0, 36);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(324, 305);
+            this.panel2.TabIndex = 2;
             // 
             // MainForm
             // 
@@ -128,8 +139,9 @@
             this.leftpane.ResumeLayout(false);
             this.leftpane.PerformLayout();
             this.rightPane.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.gridviewData)).EndInit();
             this.panel1.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridviewData)).EndInit();
+            this.panel2.ResumeLayout(false);
             this.ResumeLayout(false);
 
         }
@@ -144,6 +156,7 @@
         private System.Windows.Forms.DataGridView gridviewData;
         private System.Windows.Forms.Panel panel1;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 
