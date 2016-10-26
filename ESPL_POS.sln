@@ -5,6 +5,8 @@ VisualStudioVersion = 12.0.30501.0
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESPL_POS", "ESPL_POS\ESPL_POS.csproj", "{4A1E8DFC-09EF-4CDB-A20C-FF43098C8E9C}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ESPL_POS_TEST", "ESPL_POS_TEST\ESPL_POS_TEST.csproj", "{C9AD82CD-BA98-4EA9-971A-52202C4285E1}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -15,6 +17,10 @@ Global
 		{4A1E8DFC-09EF-4CDB-A20C-FF43098C8E9C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{4A1E8DFC-09EF-4CDB-A20C-FF43098C8E9C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{4A1E8DFC-09EF-4CDB-A20C-FF43098C8E9C}.Release|Any CPU.Build.0 = Release|Any CPU
+		{C9AD82CD-BA98-4EA9-971A-52202C4285E1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{C9AD82CD-BA98-4EA9-971A-52202C4285E1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{C9AD82CD-BA98-4EA9-971A-52202C4285E1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{C9AD82CD-BA98-4EA9-971A-52202C4285E1}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
