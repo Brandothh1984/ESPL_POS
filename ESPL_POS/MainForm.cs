@@ -8,10 +8,9 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace ESPL_POS
-{
 
-    
+namespace ESPL_POS
+{   
 
     public partial class MainForm : Form
     {
@@ -35,31 +34,34 @@ namespace ESPL_POS
             prd = new Product("P234", "Skirts", 14.90, 3);
             productList.Add(prd);
         }
-    }
 
-    class Product
-    {
-        string productSKU;
-
-
-        string productName;
-
-
-        double price;
-
-        int qty;
-
-
-
-        public Product(string sku, string pName, double pr, int _qty)
+        private void btnFind_Click(object sender, EventArgs e)
         {
-            productSKU = sku;
-            productName = pName;
-            price = pr;
-            qty = _qty;
+            try
+            {
+                if (txtProductID.Text == "")
+                {
+                    MessageBox.Show("Enter product ID");
+                }
+                else
+                {
+                    var findProduct = productList.Where(wh => wh.ProductSKU == txtProductID.Text);
+                    if (findProduct.Any())
+                    {
+                        MessageBox.Show(findProduct.SingleOrDefault().ProductName);
+                        //gridviewData.DataSource = findProduct;
+                        //gridviewData.Refresh();
+                    }
+                    else
+                    {
+                        MessageBox.Show("Item not found!");
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
         }
-
-        public Product() { }
-
     }
 }

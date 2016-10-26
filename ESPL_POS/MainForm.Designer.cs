@@ -29,11 +29,14 @@
         private void InitializeComponent()
         {
             this.leftpane = new System.Windows.Forms.Panel();
-            this.rightPane = new System.Windows.Forms.Panel();
-            this.label1 = new System.Windows.Forms.Label();
-            this.txtProductID = new System.Windows.Forms.TextBox();
             this.btnFind = new System.Windows.Forms.Button();
+            this.txtProductID = new System.Windows.Forms.TextBox();
+            this.label1 = new System.Windows.Forms.Label();
+            this.rightPane = new System.Windows.Forms.Panel();
+            this.gridviewData = new System.Windows.Forms.DataGridView();
             this.leftpane.SuspendLayout();
+            this.rightPane.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.gridviewData)).BeginInit();
             this.SuspendLayout();
             // 
             // leftpane
@@ -47,13 +50,22 @@
             this.leftpane.Size = new System.Drawing.Size(387, 341);
             this.leftpane.TabIndex = 0;
             // 
-            // rightPane
+            // btnFind
             // 
-            this.rightPane.Dock = System.Windows.Forms.DockStyle.Fill;
-            this.rightPane.Location = new System.Drawing.Point(387, 0);
-            this.rightPane.Name = "rightPane";
-            this.rightPane.Size = new System.Drawing.Size(324, 341);
-            this.rightPane.TabIndex = 1;
+            this.btnFind.Location = new System.Drawing.Point(274, 13);
+            this.btnFind.Name = "btnFind";
+            this.btnFind.Size = new System.Drawing.Size(75, 23);
+            this.btnFind.TabIndex = 2;
+            this.btnFind.Text = "Find";
+            this.btnFind.UseVisualStyleBackColor = true;
+            this.btnFind.Click += new System.EventHandler(this.btnFind_Click);
+            // 
+            // txtProductID
+            // 
+            this.txtProductID.Location = new System.Drawing.Point(104, 15);
+            this.txtProductID.Name = "txtProductID";
+            this.txtProductID.Size = new System.Drawing.Size(164, 20);
+            this.txtProductID.TabIndex = 1;
             // 
             // label1
             // 
@@ -64,21 +76,23 @@
             this.label1.TabIndex = 0;
             this.label1.Text = "Enter Product ID";
             // 
-            // txtProductID
+            // rightPane
             // 
-            this.txtProductID.Location = new System.Drawing.Point(104, 15);
-            this.txtProductID.Name = "txtProductID";
-            this.txtProductID.Size = new System.Drawing.Size(164, 20);
-            this.txtProductID.TabIndex = 1;
+            this.rightPane.Controls.Add(this.gridviewData);
+            this.rightPane.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.rightPane.Location = new System.Drawing.Point(387, 0);
+            this.rightPane.Name = "rightPane";
+            this.rightPane.Size = new System.Drawing.Size(324, 341);
+            this.rightPane.TabIndex = 1;
             // 
-            // btnFind
+            // gridviewData
             // 
-            this.btnFind.Location = new System.Drawing.Point(274, 13);
-            this.btnFind.Name = "btnFind";
-            this.btnFind.Size = new System.Drawing.Size(75, 23);
-            this.btnFind.TabIndex = 2;
-            this.btnFind.Text = "Find";
-            this.btnFind.UseVisualStyleBackColor = true;
+            this.gridviewData.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.gridviewData.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.gridviewData.Location = new System.Drawing.Point(0, 0);
+            this.gridviewData.Name = "gridviewData";
+            this.gridviewData.Size = new System.Drawing.Size(324, 341);
+            this.gridviewData.TabIndex = 0;
             // 
             // MainForm
             // 
@@ -91,6 +105,8 @@
             this.Text = "Form1";
             this.leftpane.ResumeLayout(false);
             this.leftpane.PerformLayout();
+            this.rightPane.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)(this.gridviewData)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -102,6 +118,7 @@
         private System.Windows.Forms.TextBox txtProductID;
         private System.Windows.Forms.Label label1;
         private System.Windows.Forms.Panel rightPane;
+        private System.Windows.Forms.DataGridView gridviewData;
     }
 }
 
